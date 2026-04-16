@@ -234,114 +234,113 @@
       box-shadow: 0 5px 20px rgba(90,119,106,0.4);
     }
 
-    /* ===== PROJECTS GRID (SUBTLE ANIMATION, NO IMAGE MOVE) ===== */
-.projects-section { padding: 4vh 0 10vh; }
+    /* ===== PROJECTS GRID ===== */
+    .projects-section { padding: 4vh 0 10vh; }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-}
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
 
-.project-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-}
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
 
-.project-card.hide {
-  display: none;
-}
+    .project-card.hide {
+      display: none;
+    }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(90,119,106,0.5);
-  box-shadow: 0 15px 40px rgba(90,119,106,0.2);
-}
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(90,119,106,0.5);
+      box-shadow: 0 15px 40px rgba(90,119,106,0.2);
+    }
 
-.project-img {
-  height: 240px;
-  background: #1a3a2e center/cover;
-  position: relative;
-  overflow: hidden;
-}
+    .project-img {
+      height: 240px;
+      background: #1a3a2e center/cover;
+      position: relative;
+      overflow: hidden;
+    }
 
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* NO ANIMATION ON IMAGE */
-}
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(7,18,13,0.9), transparent);
-  display: flex;
-  align-items: flex-end;
-  padding: 1.5rem;
-  opacity: 1;
-}
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7,18,13,0.9), transparent);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      opacity: 1;
+    }
 
-.project-view {
-  color: #F7F4D5;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+    .project-view {
+      color: #F7F4D5;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-.project-view i { color: var(--accent); }
+    .project-view i { color: var(--accent); }
 
-.project-body { padding: 1.8rem; }
+    .project-body { padding: 1.8rem; }
 
-.project-category {
-  font-size: 0.8rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.6rem;
-}
+    .project-category {
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+    }
 
-.project-title {
-  font-size: 1.5rem;
-  color: #F7F4D5;
-  margin-bottom: 0.6rem;
-  transition: color 0.3s ease;
-}
+    .project-title {
+      font-size: 1.5rem;
+      color: #F7F4D5;
+      margin-bottom: 0.6rem;
+      transition: color 0.3s ease;
+    }
 
-.project-card:hover .project-title {
-  color: var(--accent);
-}
+    .project-card:hover .project-title {
+      color: var(--accent);
+    }
 
-.project-description {
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
+    .project-description {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
 
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1.2rem;
-}
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.2rem;
+    }
 
-.project-tag {
-  background: rgba(90,119,106,0.15);
-  color: var(--muted);
-  padding: 0.35rem 0.9rem;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  border: 1px solid rgba(90,119,106,0.25);
-}
+    .project-tag {
+      background: rgba(90,119,106,0.15);
+      color: var(--muted);
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      border: 1px solid rgba(90,119,106,0.25);
+    }
 
-.project-wide { grid-column: 1 / -1; }
-.project-wide .project-img { height: 380px; }
+    .project-wide { grid-column: 1 / -1; }
+    .project-wide .project-img { height: 380px; }
 
     /* ===== BACK BUTTON ===== */
     .back-section {
@@ -668,7 +667,7 @@
   <div class="page-header-bg"></div>
   <div class="container">
     <h1 class="page-title" id="pageTitle">ПРОЕКТЫ</h1>
-    <p class="page-subtitle">Избранные работы в веб-дизайне, брендинге, графике и инфографике</p>
+    <p class="page-subtitle">Мои работы в веб-дизайне, графике и инфографике</p>
   </div>
 </section>
 
@@ -698,7 +697,7 @@
         <div class="project-body">
           <div class="project-category">Брендинг</div>
           <h3 class="project-title">CUTICULA — Nail Studio</h3>
-          <p class="project-description">Полный ребрендинг для премиального маникюрного салона. Логотип, фирменный стиль, вывески, визитки, соцсети.</p>
+          <p class="project-description">Ребрендинг маникюрного салона: логотип, стиль, вывески, визитки.</p>
           <div class="project-tags">
             <span class="project-tag">Логотип</span>
             <span class="project-tag">Айдентика</span>
@@ -717,7 +716,7 @@
         <div class="project-body">
           <div class="project-category">Графический дизайн</div>
           <h3 class="project-title">Van Gogh — Immersive Experience</h3>
-          <p class="project-description">Серия афиш для иммерсивной выставки Ван Гога. Типографика, композиция, адаптация под разные форматы.</p>
+          <p class="project-description">Серия афиш для выставки Ван Гога. Типографика и композиция.</p>
           <div class="project-tags">
             <span class="project-tag">Афиша</span>
             <span class="project-tag">Типографика</span>
@@ -736,7 +735,7 @@
         <div class="project-body">
           <div class="project-category">Полиграфия</div>
           <h3 class="project-title">Van Gogh — Билеты</h3>
-          <p class="project-description">Серия билетов для иммерсивной выставки. Три варианта с разными работами художника.</p>
+          <p class="project-description">Серия билетов для выставки с работами Ван Гога. 3 варианта.</p>
           <div class="project-tags">
             <span class="project-tag">Билеты</span>
             <span class="project-tag">Полиграфия</span>
@@ -755,7 +754,7 @@
         <div class="project-body">
           <div class="project-category">Графический дизайн</div>
           <h3 class="project-title">VOID — The Unseen</h3>
-          <p class="project-description">Концептуальная афиша для выставки современного искусства. Минимализм, работа с негативным пространством.</p>
+          <p class="project-description">Концептуальная афиша. Минимализм и работа с пространством.</p>
           <div class="project-tags">
             <span class="project-tag">Постер</span>
             <span class="project-tag">Минимализм</span>
@@ -774,7 +773,7 @@
         <div class="project-body">
           <div class="project-category">Стритвир / Графика</div>
           <h3 class="project-title">Y2K — 2000s Aesthetic</h3>
-          <p class="project-description">Постер в эстетике 2000-х. Глитч-эффекты, неон, ностальгия по раннему интернету и поп-культуре. 2 версии.</p>
+          <p class="project-description">Постер в стиле 2000-х. Глитч, неон, ностальгия. 2 версии.</p>
           <div class="project-tags">
             <span class="project-tag">Стритвир</span>
             <span class="project-tag">Y2K</span>
@@ -793,7 +792,7 @@
         <div class="project-body">
           <div class="project-category">Стритвир / Арт</div>
           <h3 class="project-title">DEAD — Dark Art</h3>
-          <p class="project-description">Тёмный концептуальный арт. Готическая эстетика, 3D-элементы, типографика.</p>
+          <p class="project-description">Тёмный арт. Готика, 3D-элементы, типографика.</p>
           <div class="project-tags">
             <span class="project-tag">Арт</span>
             <span class="project-tag">Готика</span>
@@ -812,7 +811,7 @@
         <div class="project-body">
           <div class="project-category">Инфографика</div>
           <h3 class="project-title">Колье «Капля света»</h3>
-          <p class="project-description">Инфографика для ювелирного изделия. Премиальная подача, акцент на деталях.</p>
+          <p class="project-description">Инфографика для ювелирного изделия. Премиальная подача.</p>
           <div class="project-tags">
             <span class="project-tag">Инфографика</span>
             <span class="project-tag">E-commerce</span>
@@ -831,7 +830,7 @@
         <div class="project-body">
           <div class="project-category">Инфографика</div>
           <h3 class="project-title">Тумбочка из кедра</h3>
-          <p class="project-description">Инфографика для мебели. Размеры, материалы, цветовые варианты. Чистая подача.</p>
+          <p class="project-description">Инфографика для мебели. Размеры, материалы, цвета.</p>
           <div class="project-tags">
             <span class="project-tag">Инфографика</span>
             <span class="project-tag">Мебель</span>
@@ -850,7 +849,7 @@
         <div class="project-body">
           <div class="project-category">Графический дизайн</div>
           <h3 class="project-title">«Любовь» — Концепт</h3>
-          <p class="project-description">Художественный постер с типографикой. Игра с текстурой, цветом, эмоцией.</p>
+          <p class="project-description">Художественный постер с типографикой и текстурой.</p>
           <div class="project-tags">
             <span class="project-tag">Постер</span>
             <span class="project-tag">Типографика</span>
@@ -869,7 +868,7 @@
         <div class="project-body">
           <div class="project-category">Инфографика</div>
           <h3 class="project-title">Напольный торшер</h3>
-          <p class="project-description">Инфографика для светильника. Характеристики, размеры, варианты комплектации.</p>
+          <p class="project-description">Инфографика для светильника. Характеристики и размеры.</p>
           <div class="project-tags">
             <span class="project-tag">Инфографика</span>
             <span class="project-tag">E-commerce</span>
@@ -888,7 +887,7 @@
         <div class="project-body">
           <div class="project-category">Полиграфия / Дизайн книги</div>
           <h3 class="project-title">«Между небом и землёй»</h3>
-          <p class="project-description">Полная обложка книги с разворотом: передняя сторона, задняя сторона, корешок. Атмосферный дизайн.</p>
+          <p class="project-description">Полная обложка книги с разворотом. Атмосферный дизайн.</p>
           <div class="project-tags">
             <span class="project-tag">Обложка</span>
             <span class="project-tag">Полиграфия</span>
@@ -951,51 +950,51 @@
     cuticula: {
       title: 'CUTICULA — Nail Studio',
       subtitle: 'Брендинг',
-      task: 'Создать премиальный бренд для маникюрного салона, который выделится на рынке и привлечёт целевую аудиторию. Клиент хотел элегантный, минималистичный стиль с элементами роскоши.',
-      process: 'Проведён анализ конкурентов, изучена целевая аудитория. Разработано 4 варианта логотипа, выбран финальный с рукой и звёздами. Создана полная айдентика: вывески, визитки, бланки, шаблоны для соцсетей.',
-      solution: 'Логотип с силуэтом руки и звёздами передаёт идею заботы и магии. Цветовая палитра — тёплые бежевые оттенки с акцентами. Шрифт — элегантный serif для премиального ощущения.',
-      result: 'Клиент запустил салон с новым брендом. Через 3 месяца посещаемость выросла на 40%. Бренд используется на всех носителях: вывеска, визитки, упаковка, Instagram.',
-      tags: ['Логотип', 'Айдентика', 'Печатная продукция', 'Figma', 'Photoshop'],
+      task: 'Создать стиль для маникюрного салона.',
+      process: 'Разработала логотип и фирменный стиль.',
+      solution: 'Элегантный дизайн с тёплыми оттенками.',
+      result: 'Клиент запустил салон с новым брендом.',
+      tags: ['Логотип', 'Айдентика', 'Figma', 'Photoshop'],
       hasVersions: false,
       website: 'https://cuticula.tilda.ws/#rec1762102451'
     },
     'vangogh-poster': {
       title: 'Van Gogh — Immersive Experience',
       subtitle: 'Графический дизайн',
-      task: 'Разработать серию афиш для иммерсивной выставки Ван Гога. Передать атмосферу творчества художника через типографику и композицию.',
-      process: 'Изучены ключевые работы Ван Гога, выбраны самые узнаваемые. Разработана концепция с разделением экрана: ч/б портрет + цветные работы. Подобрана типографика, которая не конкурирует с изображениями.',
-      solution: 'Чёрно-белый портрет Ван Гога с графическими элементами создаёт драму. Текст расположен асимметрично для динамики. Использованы цитаты художника для эмоциональной связи.',
-      result: 'Концептуальный проект для портфолио. Демонстрирует навыки работы с типографикой, композицией и серийным дизайном.',
+      task: 'Серия афиш для выставки Ван Гога.',
+      process: 'Изучила работы художника, подобрала типографику.',
+      solution: 'Ч/б портрет + графические элементы.',
+      result: 'Концептуальный проект для портфолио.',
       tags: ['Афиша', 'Типографика', 'Photoshop', 'Концепт'],
       hasVersions: false
     },
     'vangogh-tickets': {
       title: 'Van Gogh — Билеты',
       subtitle: 'Полиграфия',
-      task: 'Создать серию билетов для выставки с тремя разными работами Ван Гога. Билеты должны быть функциональными и коллекционными.',
-      process: 'Разработан формат билета с отрывной частью. Выбраны 3 знаковые работы: звёздная ночь, подсолнухи, абстракция. Добавлены штрих-коды для сканирования.',
-      solution: 'Каждый билет — мини-постер с картиной Ван Гога. Обратная сторона содержит информацию о выставке. Цветовая кодировка для разных типов билетов.',
-      result: 'Концептуальный проект для портфолио. Показывает навыки работы с полиграфией и серийным дизайном.',
+      task: 'Серия билетов для выставки.',
+      process: 'Разработала формат с отрывной частью.',
+      solution: 'Каждый билет — мини-постер с картиной.',
+      result: 'Концептуальный проект для портфолио.',
       tags: ['Билеты', 'Полиграфия', 'Серия', 'Концепт'],
       hasVersions: false
     },
     void: {
       title: 'VOID — The Unseen',
       subtitle: 'Графический дизайн',
-      task: 'Создать концептуальную афишу для выставки современного искусства. Тема — невидимое, скрытое, воображение.',
-      process: 'Разработана идея с «окном» в буквах — через текст видно изображение выставки. Минималистичный подход, только необходимое.',
-      solution: 'Крупная типографика VOID создаёт «окна» в буквах. Чёрный фон усиливает контраст. Логотип выставки внутри буквы O. Минимум текста, максимум воздействия.',
-      result: 'Учебный проект по минимализму. Демонстрирует работу с негативным пространством и концептуальное мышление.',
+      task: 'Концептуальная афиша о невидимом.',
+      process: 'Идея с «окном» в буквах.',
+      solution: 'Крупная типографика VOID, чёрный фон.',
+      result: 'Учебный проект по минимализму.',
       tags: ['Постер', 'Минимализм', 'Figma', 'Концепт'],
       hasVersions: false
     },
     y2k: {
       title: 'Y2K — 2000s Aesthetic',
       subtitle: 'Стритвир / Графика',
-      task: 'Создать постер в эстетике 2000-х для бренда стритвира. Передать ностальгию по раннему интернету и поп-культуре.',
-      process: 'Изучена визуальная культура 2000-х: глитч, неон, блёстки, корейская эстетика. Собрана композиция с множеством слоёв и текстур. Созданы 2 версии с разными цветовыми акцентами.',
-      solution: 'Центральный портрет с цветными волосами. Глитч-эффекты, корейский текст, звёзды с блёстками. Жёлтый стикер SALE добавляет иронии. Версия 1 — синие/розовые волосы, Версия 2 — розовые/голубые волосы.',
-      result: 'Концепт для бренда стритвира. Показывает понимание современной визуальной культуры и работу со сложными композициями. Две версии позволяют выбрать лучшую для кампании.',
+      task: 'Постер в стиле 2000-х.',
+      process: 'Глитч, неон, блёстки, корейская эстетика.',
+      solution: 'Портрет с цветными волосами, звёзды.',
+      result: 'Концепт для бренда стритвира.',
       tags: ['Стритвир', 'Y2K', 'Photoshop', 'Концепт'],
       hasVersions: true,
       versions: {
@@ -1006,60 +1005,60 @@
     dead: {
       title: 'DEAD — Dark Art',
       subtitle: 'Стритвир / Арт',
-      task: 'Создать тёмный концептуальный арт для обложки альбома или мерча. Тема — смерть, трансформация, готика.',
-      process: 'Разработана 3D-модель головы с эффектом жидкого металла. Красный фон создаёт драму. Типографика наложена слоями для глубины.',
-      solution: 'Чёрная голова с красными акцентами на тёмно-красном фоне. Серебристые элементы вокруг. Слои текста DEAD создают эффект глубины.',
-      result: 'Художественный эксперимент. Демонстрирует навыки работы с 3D-элементами, сложной композицией и тёмной эстетикой.',
+      task: 'Тёмный арт для обложки или мерча.',
+      process: '3D-модель головы, жидкий металл.',
+      solution: 'Чёрная голова с красными акцентами.',
+      result: 'Художественный эксперимент.',
       tags: ['Арт', 'Готика', 'Обложка', 'Концепт'],
       hasVersions: false
     },
     jewelry: {
       title: 'Колье «Капля света»',
       subtitle: 'Инфографика',
-      task: 'Создать продающую инфографику для ювелирного изделия. Подчеркнуть премиальность, показать детали и преимущества.',
-      process: 'Изучена целевая аудитория ювелирных изделий. Выбраны ключевые преимущества: покрытие, качество, замок. Разработана композиция с акцентом на продукт.',
-      solution: 'Ч/б фон с цветным продуктом создаёт премиальное ощущение. Золотые акценты и иконки подчёркивают статус. Крупное фото изделия в рамке.',
-      result: 'Концептуальный проект для портфолио. Показывает навыки работы с e-commerce инфографикой и премиальной подачей.',
-      tags: ['Инфографика', 'E-commerce', 'Ювелирка', 'Photoshop'],
+      task: 'Инфографика для ювелирного изделия.',
+      process: 'Выделила преимущества, продумала композицию.',
+      solution: 'Ч/б фон с цветным продуктом.',
+      result: 'Концептуальный проект для портфолио.',
+      tags: ['Инфографика', 'E-commerce', 'Photoshop'],
       hasVersions: false
     },
     furniture: {
       title: 'Тумбочка из кедра',
       subtitle: 'Инфографика',
-      task: 'Создать инфографику для мебели с размерами и характеристиками. Сделать понятной и эстетичной.',
-      process: 'Разработана схема с размерами. Выделены ключевые характеристики: материал, цвета. Добавлены выноски для наглядности.',
-      solution: 'Минималистичный фон, чёткие размеры, выноски к элементам. Показаны цветовые варианты. Шрифт — современный serif.',
-      result: 'Концептуальный проект для портфолио. Демонстрирует работу с технической инфографикой и мебельной тематикой.',
+      task: 'Инфографика для мебели.',
+      process: 'Схема с размерами и выносками.',
+      solution: 'Минималистичный фон, чёткие размеры.',
+      result: 'Концептуальный проект для портфолио.',
       tags: ['Инфографика', 'Мебель', 'Figma', 'E-commerce'],
       hasVersions: false
     },
     artposter: {
       title: '«Любовь» — Концепт',
       subtitle: 'Графический дизайн',
-      task: 'Создать художественный постер с эмоциональной нагрузкой. Эксперимент с типографикой и текстурой.',
-      process: 'Разработана концепция с повторяющимся словом «ЛЮБОВЬ» в разных текстурах. Справа — крупный план глаза с радужным эффектом.',
-      solution: 'Левая часть — типографика с градиентными текстурами. Правая — макросъёмка глаза. Цитата внизу добавляет глубину.',
-      result: 'Художественный эксперимент. Показывает навыки работы с эмоциональным дизайном и сложной типографикой.',
+      task: 'Художественный постер с эмоцией.',
+      process: 'Слово «ЛЮБОВЬ» в текстурах, фото глаза.',
+      solution: 'Типографика + фото, цитата внизу.',
+      result: 'Художественный эксперимент.',
       tags: ['Постер', 'Типографика', 'Арт', 'Концепт'],
       hasVersions: false
     },
     lamp: {
       title: 'Напольный торшер',
       subtitle: 'Инфографика',
-      task: 'Создать инфографику для светильника с характеристиками. Сделать визуально привлекательной и информативной.',
-      process: 'Изучены ключевые характеристики: высота, диаметр, режимы. Разработаны круглые элементы для данных. Подобрана тёплая цветовая гамма.',
-      solution: 'Торшер в центре, характеристики в кругах вокруг. Тёплый свет на фоне создаёт атмосферу. Крупная типографика для заголовка.',
-      result: 'Концептуальный проект для портфолио. Демонстрирует работу с инфографикой для товаров для дома.',
+      task: 'Инфографика для светильника.',
+      process: 'Характеристики в кругах, тёплая гамма.',
+      solution: 'Торшер в центре, данные вокруг.',
+      result: 'Концептуальный проект для портфолио.',
       tags: ['Инфографика', 'E-commerce', 'Figma', 'Товары для дома'],
       hasVersions: false
     },
     book: {
       title: '«Между небом и землёй» — Виктория Полевая',
       subtitle: 'Полиграфия / Дизайн книги',
-      task: 'Создать полную обложку книги с разворотом: передняя сторона, задняя сторона, корешок. Передать атмосферу мистики, духовного поиска, перехода между мирами.',
-      process: 'Разработана концепция с сияющей фигурой на фоне туманного пейзажа. Подобрана цветовая гамма: холодные зелёно-голубые оттенки для мистической атмосферы. Текст расположен с учётом иерархии.',
-      solution: 'Передняя обложка — светящаяся фигура в поле, название и автор. Корешок — название и автор вертикально. Задняя обложка — аннотация книги и цитата. Единый фон для всего разворота.',
-      result: 'Концептуальный проект для портфолио. Демонстрирует навыки работы с полиграфией, вёрсткой книг и созданием атмосферного дизайна.',
+      task: 'Полная обложка книги с разворотом.',
+      process: 'Сияющая фигура, холодные оттенки.',
+      solution: 'Передняя/задняя обложка + корешок.',
+      result: 'Концептуальный проект для портфолио.',
       tags: ['Обложка', 'Полиграфия', 'Книга', 'Photoshop', 'Вёрстка'],
       hasVersions: false
     }
