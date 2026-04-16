@@ -302,81 +302,80 @@
       width: 100%;
     }
 
-    /* ===== CARDS (SUBTLE ANIMATION, NO IMAGE MOVE) ===== */
-.cards-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 2rem; 
-}
+    /* ===== CARDS (SUBTLE ANIMATION) ===== */
+    .cards-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 2rem; 
+    }
 
-.card { 
-  background: var(--card); 
-  border: 1px solid var(--border); 
-  border-radius: 1rem; 
-  overflow: hidden; 
-  cursor: pointer; 
-  transition: all 0.3s ease;
-  position: relative;
-}
+    .card { 
+      background: var(--card); 
+      border: 1px solid var(--border); 
+      border-radius: 1rem; 
+      overflow: hidden; 
+      cursor: pointer; 
+      transition: all 0.3s ease;
+      position: relative;
+    }
 
-.card:hover { 
-  transform: translateY(-5px);
-  border-color: rgba(90,119,106,0.4);
-  box-shadow: 0 15px 40px rgba(90,119,106,0.2);
-}
+    .card:hover { 
+      transform: translateY(-5px);
+      border-color: rgba(90,119,106,0.4);
+      box-shadow: 0 15px 40px rgba(90,119,106,0.2);
+    }
 
-.card-img { 
-  height: 200px; 
-  background: #1a3a2e center/cover; 
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
+    .card-img { 
+      height: 200px; 
+      background: #1a3a2e center/cover; 
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
 
-.card-img img { 
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover;
-  /* NO ANIMATION ON IMAGE */
-}
+    .card-img img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover;
+    }
 
-.card-body { 
-  padding: 1.5rem; 
-  position: relative;
-  z-index: 1;
-}
+    .card-body { 
+      padding: 1.5rem; 
+      position: relative;
+      z-index: 1;
+    }
 
-.card-title { 
-  font-size: 1.4rem; 
-  color: #F7F4D5; 
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
-}
+    .card-title { 
+      font-size: 1.4rem; 
+      color: #F7F4D5; 
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
 
-.card:hover .card-title {
-  color: var(--accent);
-}
+    .card:hover .card-title {
+      color: var(--accent);
+    }
 
-.card-text { color: var(--muted); font-size: 0.9rem; }
+    .card-text { color: var(--muted); font-size: 0.9rem; }
+    
+    .card-price { 
+      display: inline-block; 
+      margin-top: 1rem; 
+      padding: 0.4rem 1rem; 
+      border: 1px solid var(--accent); 
+      border-radius: 50px; 
+      color: #F7F4D5; 
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
 
-.card-price { 
-  display: inline-block; 
-  margin-top: 1rem; 
-  padding: 0.4rem 1rem; 
-  border: 1px solid var(--accent); 
-  border-radius: 50px; 
-  color: #F7F4D5; 
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-}
+    .card:hover .card-price {
+      background: var(--accent);
+      color: #F7F4D5;
+      box-shadow: 0 5px 15px rgba(90,119,106,0.3);
+    }
 
-.card:hover .card-price {
-  background: var(--accent);
-  color: #F7F4D5;
-  box-shadow: 0 5px 15px rgba(90,119,106,0.3);
-}
-
-.card-wide { grid-column: 1 / -1; }
+    .card-wide { grid-column: 1 / -1; }
 
     /* ===== ABOUT ===== */
     .about-grid {
@@ -640,7 +639,7 @@
   <div class="hero-content container">
     <h1 class="hero-title" id="heroTitle">PORTFOLIO</h1>
     <div class="web-design">WEB DESIGN</div>
-    <p class="hero-subtitle">Интуитивные интерфейсы · 3 года опыта · AI в работе</p>
+    <p class="hero-subtitle">Интуитивные интерфейсы · Современный подход · AI в работе</p>
     <a href="works.html" class="btn">Смотреть проекты</a>
   </div>
 </section>
@@ -650,11 +649,12 @@
   <div class="container">
     <h2 class="section-title">Обо мне</h2>
     <p style="max-width:900px;margin:0 auto;text-align:center;color:var(--text);font-size:clamp(1.05rem,3vw,1.25rem);line-height:1.8;">
-      Привет! Меня зовут <strong style="color:var(--accent);">Алёна</strong>, и я веб-дизайнер с 3-летним опытом.
+      Привет! Меня зовут <strong style="color:var(--accent);">Алёна</strong>, и я начинающий веб-дизайнер.
     </p>
     <p style="max-width:900px;margin:2rem auto;text-align:center;color:var(--text);font-size:clamp(1rem,2.5vw,1.15rem);line-height:1.8;">
       Я создаю интерфейсы, которые не просто красиво выглядят — они работают на ваш бизнес. 
-      Каждый проект для меня это возможность решить задачу клиента через визуал, композицию и внимание к деталям.
+      Каждый проект для меня — это возможность создать что-то уникальное, вложив душу и внимание к деталям.
+      Работаю честно, вникаю в задачу и всегда на связи.
     </p>
 
     <div class="about-grid">
@@ -729,7 +729,7 @@
         <div class="card-body">
           <h3 class="card-title">Web Design</h3>
           <p class="card-text">Адаптивные сайты · UX/UI · дизайн-системы</p>
-          <span class="card-price">от 15 000 ₽</span>
+          <span class="card-price">от 8 000 ₽</span>
         </div>
       </div>
 
@@ -738,7 +738,7 @@
         <div class="card-body">
           <h3 class="card-title">Инфографика</h3>
           <p class="card-text">Карточки товаров · презентации · дашборды</p>
-          <span class="card-price">от 3 000 ₽</span>
+          <span class="card-price">от 1 500 ₽</span>
         </div>
       </div>
 
@@ -747,7 +747,7 @@
         <div class="card-body">
           <h3 class="card-title">Графический дизайн</h3>
           <p class="card-text">Брендинг · постеры · обложки · SMM</p>
-          <span class="card-price">от 5 000 ₽</span>
+          <span class="card-price">от 3 000 ₽</span>
         </div>
       </div>
 
@@ -756,7 +756,7 @@
         <div class="card-body">
           <h3 class="card-title">Обложки для музыки</h3>
           <p class="card-text">Синглы · альбомы · афиши · мерч</p>
-          <span class="card-price">от 4 000 ₽</span>
+          <span class="card-price">от 2 500 ₽</span>
         </div>
       </div>
     </div>
@@ -789,8 +789,8 @@
       <div class="contact-card">
         <i class="fab fa-vk"></i>
         <h3>ВКонтакте</h3>
-        <a href="https://vk.com/lamark_original" target="_blank" rel="noopener noreferrer">Алёна Попова</a>
-        <a href="https://vk.com/lamark_original" target="_blank" rel="noopener noreferrer" class="btn">Написать</a>
+        <a href="https://vk.com/alena_popova" target="_blank" rel="noopener noreferrer">Алёна Попова</a>
+        <a href="https://vk.com/alena_popova" target="_blank" rel="noopener noreferrer" class="btn">Написать</a>
       </div>
     </div>
 
@@ -814,7 +814,7 @@
       <a href="mailto:alenapopova149@gmail.com" class="btn">
         <i class="far fa-envelope"></i> Email
       </a>
-      <a href="https://vk.com/lamark_original" target="_blank" rel="noopener noreferrer" class="btn">
+      <a href="https://vk.com/alena_popova" target="_blank" rel="noopener noreferrer" class="btn">
         <i class="fab fa-vk"></i> ВКонтакте
       </a>
     </div>
@@ -829,7 +829,7 @@
     <h3 class="modal-title" id="modalTitle">Услуга</h3>
     <p class="modal-subtitle">ПРАЙС-ЛИСТ</p>
     <div id="modalContent"></div>
-    <p class="modal-note">Итоговая стоимость зависит от сложности</p>
+    <p class="modal-note">Итоговая стоимость зависит от сложности · Первая консультация — бесплатно</p>
     <a href="https://t.me/lamark_original" class="modal-link"><i class="fab fa-telegram-plane"></i> Обсудить проект</a>
   </div>
 </div>
@@ -862,33 +862,33 @@
 
   const priceData = {
     webdesign: { title: 'Web Design', items: [
-      { name: 'Лендинг (до 5 экранов)', price: '15 000 ₽' },
-      { name: 'Лендинг (до 10 экранов)', price: '25 000 ₽' },
-      { name: 'Многостраничный сайт', price: 'от 40 000 ₽' },
-      { name: 'Интернет-магазин', price: 'от 60 000 ₽' },
-      { name: 'UX/UI аудит', price: '10 000 ₽' },
-      { name: 'Прототипирование', price: 'от 8 000 ₽' }
+      { name: 'Лендинг (до 5 экранов)', price: '8 000 ₽' },
+      { name: 'Лендинг (до 10 экранов)', price: '15 000 ₽' },
+      { name: 'Многостраничный сайт', price: 'от 25 000 ₽' },
+      { name: 'UX/UI аудит', price: '5 000 ₽' },
+      { name: 'Прототипирование', price: 'от 4 000 ₽' }
     ]},
     infographic: { title: 'Инфографика', items: [
-      { name: 'Карточка товара (1 шт)', price: '3 000 ₽' },
-      { name: 'Карточка товара (5 шт)', price: '12 000 ₽' },
-      { name: 'Карточка товара (10 шт)', price: '20 000 ₽' },
-      { name: 'Инфографика для презентации', price: 'от 15 000 ₽' },
-      { name: 'Дашборд', price: 'от 25 000 ₽' }
+      { name: 'Карточка товара (1 шт)', price: '1 500 ₽' },
+      { name: 'Карточка товара (5 шт)', price: '6 000 ₽' },
+      { name: 'Карточка товара (10 шт)', price: '10 000 ₽' },
+      { name: 'Инфографика для презентации', price: 'от 8 000 ₽' },
+      { name: 'Дашборд', price: 'от 12 000 ₽' }
     ]},
     graphic: { title: 'Графический дизайн', items: [
-      { name: 'Логотип', price: '10 000 ₽' },
-      { name: 'Фирменный стиль', price: 'от 25 000 ₽' },
-      { name: 'Постер/флаер', price: '5 000 ₽' },
-      { name: 'Обложка книги/альбома', price: '8 000 ₽' },
-      { name: 'Дизайн соцсетей (10 постов)', price: '15 000 ₽' }
+      { name: 'Логотип', price: '5 000 ₽' },
+      { name: 'Фирменный стиль (базовый)', price: 'от 15 000 ₽' },
+      { name: 'Постер/флаер', price: '3 000 ₽' },
+      { name: 'Обложка книги/альбома', price: '5 000 ₽' },
+      { name: 'Дизайн соцсетей (1 пост)', price: '1 000 ₽' },
+      { name: 'Дизайн соцсетей (10 постов)', price: '8 000 ₽' }
     ]},
     music: { title: 'Обложки для музыки', items: [
-      { name: 'Обложка сингла', price: '4 000 ₽' },
-      { name: 'Обложка альбома', price: '10 000 ₽' },
-      { name: 'Обложка для стриминга', price: '5 000 ₽' },
-      { name: 'Концертный постер', price: '7 000 ₽' },
-      { name: 'Пакет (обложка + постер)', price: '12 000 ₽' }
+      { name: 'Обложка сингла', price: '2 500 ₽' },
+      { name: 'Обложка альбома', price: '6 000 ₽' },
+      { name: 'Обложка для стриминга', price: '3 000 ₽' },
+      { name: 'Концертный постер', price: '4 000 ₽' },
+      { name: 'Пакет (обложка + постер)', price: '7 000 ₽' }
     ]}
   };
 
