@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru" data-palette="forest" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — Алёна Попова</title>
+<meta name="description" content="Бриф для нового проекта: расскажите о задаче, сроках и бюджете — отвечу с планом и точной суммой.">
+<meta name="theme-color" content="#F6F3EA">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Бриф — Алёна Попова">
+<meta property="og:description" content="Пять минут — и у меня будет достаточно, чтобы назвать сроки и точную сумму.">
+<meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css?v=8">
+<link rel="stylesheet" href="assets/css/site.css?v=8">
+<script src="assets/js/boot.js?v=8"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">К содержанию</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/img/logo.png" alt="" width="40" height="40">
+      <span class="brand-text">веб-дизайн и графика</span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="works.html">Работы</a>
+      <a href="services.html">Услуги</a>
+      <a href="brief.html">Бриф</a>
+      <a href="index.html#about">Обо мне</a>
+      <a href="index.html#contact">Контакты</a>
+    </nav>
+
+    <div class="tools">
+      <div class="palettes" role="group" aria-label="Цветовая палитра">
+        <button class="palette-dot" data-palette="forest" aria-pressed="true" aria-label="Лес и бумага" title="Лес и бумага" style="--dot:#3C6653"></button>
+        <button class="palette-dot" data-palette="clay" aria-pressed="false" aria-label="Терракота" title="Терракота" style="--dot:#97573A"></button>
+        <button class="palette-dot" data-palette="steel" aria-pressed="false" aria-label="Туман и сталь" title="Туман и сталь" style="--dot:#3B5C7D"></button>
+        <button class="palette-dot" data-palette="rose" aria-pressed="false" aria-label="Пыльная роза" title="Пыльная роза" style="--dot:#8E4A5B"></button>
+        <button class="palette-dot" data-palette="graphite" aria-pressed="false" aria-label="Графит" title="Графит" style="--dot:#2F2F2F"></button>
+      </div>
+      <button class="theme-btn" aria-label="Переключить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="works.html">Работы</a>
+  <a href="services.html">Услуги</a>
+  <a href="brief.html">Бриф</a>
+  <a href="index.html#about">Обо мне</a>
+  <a href="index.html#contact">Контакты</a>
+  <div class="mobile-menu-palettes">
+    <span class="mobile-menu-label">Палитра</span>
+    <div class="palettes" role="group" aria-label="Цветовая палитра">
+      <button class="palette-dot" data-palette="forest" aria-pressed="true" aria-label="Лес и бумага" title="Лес и бумага" style="--dot:#3C6653"></button>
+      <button class="palette-dot" data-palette="clay" aria-pressed="false" aria-label="Терракота" title="Терракота" style="--dot:#97573A"></button>
+      <button class="palette-dot" data-palette="steel" aria-pressed="false" aria-label="Туман и сталь" title="Туман и сталь" style="--dot:#3B5C7D"></button>
+      <button class="palette-dot" data-palette="rose" aria-pressed="false" aria-label="Пыльная роза" title="Пыльная роза" style="--dot:#8E4A5B"></button>
+      <button class="palette-dot" data-palette="graphite" aria-pressed="false" aria-label="Графит" title="Графит" style="--dot:#2F2F2F"></button>
+    </div>
+  </div>
+
+</div>
+
+<main id="main">
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Бриф</p>
+      <h1>Расскажите о проекте</h1>
+      <p class="page-lead">Пять минут — и я смогу ответить с планом, сроками и точной суммой. Обязательные поля отмечены звёздочкой, остальные можно пропустить.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="brief-layout">
+
+        <div>
+          <form class="brief" id="briefForm" novalidate>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="bf-name">Как вас зовут <span class="req">*</span></label>
+                <input id="bf-name" name="name" type="text" autocomplete="name" placeholder="Имя" required>
+              </div>
+              <div class="field">
+                <label for="bf-channel">Где удобнее отвечать</label>
+                <select id="bf-channel" name="channel">
+                  <option>Telegram</option>
+                  <option>Почта</option>
+                  <option>ВКонтакте</option>
+                  <option>Телефон</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="bf-contact">Контакт <span class="req">*</span></label>
+              <input id="bf-contact" name="contact" type="text" placeholder="@username, почта или номер" required>
+              <p class="field-note">Куда прислать ответ</p>
+            </div>
+
+            <div class="field">
+              <label for="bf-service">Что нужно сделать</label>
+              <select id="bf-service" name="service">
+                <option>Лендинг под ключ</option>
+                <option>Дизайн сайта (только макет)</option>
+                <option>Вёрстка по готовому макету</option>
+                <option>Многостраничный сайт</option>
+                <option>Айдентика и логотип</option>
+                <option>Инфографика для маркетплейса</option>
+                <option>Плакат или обложка</option>
+                <option>Правки на существующем сайте</option>
+                <option>Пока не знаю</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="bf-about">Чем вы занимаетесь</label>
+              <textarea id="bf-about" name="about" rows="3" placeholder="Например: небольшая студия маникюра, нужен сайт для записи"></textarea>
+              <p class="field-note">Пара слов о себе или бизнесе — поможет с содержанием и акцентами</p>
+            </div>
+
+            <div class="field">
+              <label for="bf-task">Задача проекта <span class="req">*</span></label>
+              <textarea id="bf-task" name="task" rows="5" placeholder="Что должно получиться и для кого. Например: одностраничник на 6 экранов, чтобы клиенты записывались онлайн, без звонков" required></textarea>
+            </div>
+
+            <fieldset class="field">
+              <legend>Что уже есть</legend>
+              <div class="checks">
+                <label class="check"><input type="checkbox" name="assets" value="Тексты"><span>Тексты</span></label>
+                <label class="check"><input type="checkbox" name="assets" value="Фотографии"><span>Фотографии</span></label>
+                <label class="check"><input type="checkbox" name="assets" value="Логотип и фирменный стиль"><span>Логотип и стиль</span></label>
+                <label class="check"><input type="checkbox" name="assets" value="Готовый макет"><span>Готовый макет</span></label>
+                <label class="check"><input type="checkbox" name="assets" value="Ничего нет"><span>Ничего нет</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="bf-deadline">Сроки</label>
+                <select id="bf-deadline" name="deadline">
+                  <option>Срочно, 1–3 дня</option>
+                  <option>В течение двух недель</option>
+                  <option>В течение месяца</option>
+                  <option>1–2 месяца</option>
+                  <option>Не горит</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="bf-budget">Бюджет</label>
+                <select id="bf-budget" name="budget">
+                  <option>до 15 000 ₽</option>
+                  <option>15 000–30 000 ₽</option>
+                  <option>30 000–50 000 ₽</option>
+                  <option>от 50 000 ₽</option>
+                  <option>Пока не знаю</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="bf-refs">Примеры, которые нравятся</label>
+              <textarea id="bf-refs" name="refs" rows="2" placeholder="Ссылки на сайты или просто «спокойно, без ярких цветов»"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="bf-extra">Что ещё важно</label>
+              <textarea id="bf-extra" name="extra" rows="2" placeholder="Дедлайн, ограничения, пожелания — всё, что стоит знать заранее"></textarea>
+            </div>
+
+            <div class="brief-submit">
+              <button class="btn btn-primary" type="submit">Собрать бриф</button>
+              <button class="link-reset" type="button" id="briefReset">Очистить</button>
+            </div>
+            <p class="field-note">Форма ничего не отправляет сама. После нажатия вы откроете письмо или скопируете текст в Telegram. Черновик сохраняется в браузере.</p>
+          </form>
+
+          <section class="brief-result" id="briefResult" hidden>
+            <h2>Бриф готов</h2>
+            <p class="field-note">Отправьте его любым удобным способом — текст уже собран.</p>
+            <textarea id="briefText" rows="14" readonly aria-label="Текст брифа"></textarea>
+            <div class="brief-actions">
+              <a class="btn btn-primary" id="mailBrief" href="mailto:alenapopova149@gmail.com">Открыть в почте</a>
+              <button class="btn btn-ghost" type="button" id="copyBrief">Скопировать</button>
+              <a class="btn btn-ghost" href="https://t.me/lamark_original" target="_blank" rel="noopener">Telegram</a>
+            </div>
+            <p class="brief-status" id="briefStatus" role="status"></p>
+          </section>
+        </div>
+
+        <aside class="brief-aside">
+          <div class="brief-card">
+            <h2>Что будет дальше</h2>
+            <ol class="brief-steps">
+              <li>Читаю бриф и отвечаю в течение дня.</li>
+              <li>Задаю уточняющие вопросы, если что-то неясно.</li>
+              <li>Присылаю план, сроки и точную сумму.</li>
+            </ol>
+          </div>
+
+          <div class="brief-card">
+            <h2>Если проще написать</h2>
+            <p>Можно без формы — коротко о задаче в одном сообщении.</p>
+            <div class="brief-actions">
+              <a class="btn btn-ghost btn-sm" href="https://t.me/lamark_original" target="_blank" rel="noopener">Telegram</a>
+              <a class="btn btn-ghost btn-sm" href="mailto:alenapopova149@gmail.com">Почта</a>
+            </div>
+          </div>
+
+          <div class="brief-card">
+            <h2>Не знаете, что писать</h2>
+            <p>Достаточно трёх вещей: что за проект, для кого он и к какому сроку. Остальное обсудим на созвоне.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="copyright">© 2026 Алёна Попова</span>
+    <nav class="footer-links" aria-label="Ссылки в подвале">
+      <a href="works.html">Работы</a>
+      <a href="services.html">Услуги</a>
+      <a href="brief.html">Бриф</a>
+      <a href="https://t.me/lamark_original" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:alenapopova149@gmail.com">Почта</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/theme.js?v=8" defer></script>
+<script src="assets/js/brief.js?v=8" defer></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шрифты для заголовков — варианты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Alice&family=Cormorant+Garamond:wght@500&family=Literata:opsz,wght@7..72,500&family=Lora:wght@400&family=Old+Standard+TT&family=Oranienbaum&family=Playfair+Display:wght@500&family=Prata&family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#F6F3EA; --text:#1B2A23; --muted:#5A6A61; --accent:#3C6653; --border:#DCD8C8; --surface:#FFFDF7;
+  --font-body: 'Lora', Georgia, serif;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--text); font-family:var(--font-body); font-size:18px; line-height:1.68; padding:44px 20px 80px; }
+.wrap { max-width:900px; margin:0 auto; }
+h1.page { font-family:var(--font-body); font-size:26px; font-weight:500; margin-bottom:6px; }
+p.note { color:var(--muted); font-size:15px; line-height:1.55; max-width:70ch; margin-bottom:34px; }
+.block { border-top:1px solid var(--border); padding:26px 0 32px; }
+.head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+.label { font-family:ui-sans-serif, system-ui, sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+.tag { font-family:ui-sans-serif, system-ui, sans-serif; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; padding:3px 8px; border-radius:100px; background:var(--accent); color:#F6F3EA; }
+.tag.alt { background:transparent; color:var(--muted); border:1px solid var(--border); }
+.h38 { font-size:38px; line-height:1.2; letter-spacing:-.004em; margin-bottom:8px; }
+.h26 { font-size:26px; line-height:1.2; letter-spacing:-.004em; margin-bottom:8px; color:var(--text); }
+.h21 { font-size:21px; line-height:1.25; margin-bottom:14px; }
+.bodyline { font-family:var(--font-body); font-size:18px; color:var(--muted); max-width:62ch; }
+small { display:block; margin-top:12px; font-family:ui-sans-serif, system-ui, sans-serif; font-size:12.5px; line-height:1.5; color:var(--muted); }
+.palatino { font-family:'Palatino Linotype', Palatino, Georgia, serif; }
+.playfair { font-family:'Playfair Display', Georgia, serif; font-weight:500; }
+.prata { font-family:'Prata', Georgia, serif; font-weight:400; }
+.cormorant { font-family:'Cormorant Garamond', Georgia, serif; font-weight:500; }
+.alegreya { font-family:'Alegreya', Georgia, serif; font-weight:500; }
+.oldstandard { font-family:'Old Standard TT', Georgia, serif; font-weight:400; }
+.oranienbaum { font-family:'Oranienbaum', Georgia, serif; font-weight:400; }
+.literata { font-family:'Literata', Georgia, serif; font-weight:500; }
+.vollkorn { font-family:'Vollkorn', Georgia, serif; font-weight:500; }
+.alice { font-family:'Alice', Georgia, serif; font-weight:400; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="page">Шрифты для заголовков</h1>
+  <p class="note">Все — с кириллицей, строчными буквами и в одном масштабе. Сверху крупно, ниже — мобильный размер и заголовок карточки. Последняя строка в каждом блоке — ваш текст Lora, чтобы видеть пару.</p>
+
+  <div class="block">
+    <div class="head"><span class="label">Playfair Display 500</span><span class="tag">Рекомендую</span></div>
+    <p class="h38 playfair">Избранные работы</p>
+    <p class="h26 playfair">Что входит в стоимость</p>
+    <p class="h21 playfair">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Самый близкий к Bodoni и самый «журнальный». Сильный контраст с Lora, поэтому заголовок сразу читается как заголовок. Уже подключён для плашки — вес сайта не вырастет.</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Prata</span><span class="tag">Рекомендую</span></div>
+    <p class="h38 prata">Избранные работы</p>
+    <p class="h26 prata">Что входит в стоимость</p>
+    <p class="h21 prata">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Самая изящная из списка: высокая контрастность, тонкие волосяные линии, русская школа. Есть только обычное начертание — на 21 px чуть светлее остальных, но крупные заголовки выглядят дорого.</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Cormorant Garamond 500</span><span class="tag">Рекомендую</span></div>
+    <p class="h38 cormorant">Избранные работы</p>
+    <p class="h26 cormorant">Что входит в стоимость</p>
+    <p class="h21 cormorant">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Воздушный, даёт много света. Тот же шрифт, что у «Web design» на плашке, — сайт станет цельным. На мелких заголовках берите 600, иначе светловато.</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Alegreya 500</span><span class="tag alt">альтернатива</span></div>
+    <p class="h38 alegreya">Избранные работы</p>
+    <p class="h26 alegreya">Что входит в стоимость</p>
+    <p class="h21 alegreya">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Живой, чуть каллиграфический — заметны рукописные корни. Тёплый характер, хорош, если хочется «от руки», а не «глянец».</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Old Standard TT</span><span class="tag alt">альтернатива</span></div>
+    <p class="h38 oldstandard">Избранные работы</p>
+    <p class="h26 oldstandard">Что входит в стоимость</p>
+    <p class="h21 oldstandard">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Классическая антиква с книжным, почти научным характером. Строго и сдержанно, но меньше «портфолио дизайнера», больше «издательство».</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Oranienbaum</span><span class="tag alt">альтернатива</span></div>
+    <p class="h38 oranienbaum">Избранные работы</p>
+    <p class="h26 oranienbaum">Что входит в стоимость</p>
+    <p class="h21 oranienbaum">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Русский акцидентный шрифт с характером, высокий контраст. Очень выразителен крупно, но на маленьких заголовках капризен.</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Literata 500</span><span class="tag alt">альтернатива</span></div>
+    <p class="h38 literata">Избранные работы</p>
+    <p class="h26 literata">Что входит в стоимость</p>
+    <p class="h21 literata">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Современный книжный шрифт: плотный, очень разборчивый. Надёжно, но по характеру ближе к тексту, чем к заголовку.</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Vollkorn 500</span><span class="tag alt">альтернатива</span></div>
+    <p class="h38 vollkorn">Избранные работы</p>
+    <p class="h26 vollkorn">Что входит в стоимость</p>
+    <p class="h21 vollkorn">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Тёплый, немного «ремесленный». Дружелюбнее Palatino, но менее утончённый.</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Alice</span><span class="tag alt">альтернатива</span></div>
+    <p class="h38 alice">Избранные работы</p>
+    <p class="h26 alice">Что входит в стоимость</p>
+    <p class="h21 alice">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Мягкая, округлая антиква. Милая и аккуратная, но заметно «женственнее» и проще остальных.</small>
+  </div>
+
+  <div class="block">
+    <div class="head"><span class="label">Palatino Linotype — сейчас</span></div>
+    <p class="h38 palatino">Избранные работы</p>
+    <p class="h26 palatino">Что входит в стоимость</p>
+    <p class="h21 palatino">Инфографика для маркетплейса</p>
+    <p class="bodyline">Собираю сайты целиком: структура, макет, вёрстка, публикация.</p>
+    <small>Спокойно и аккуратно, но на телефонах вместо него PT Serif.</small>
+  </div>
+</div>
+</body>
+</html>
