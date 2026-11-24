@@ -1,0 +1,133 @@
+/* ============================================================
+   ПАЛИТРЫ И ТЕМЫ
+   Менять цвета нужно ТОЛЬКО в этом файле.
+   Каждая палитра = два блока: светлая и тёмная.
+   ============================================================ */
+
+:root {
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 12px 32px rgba(20, 20, 20, .07);
+  --maxw: 1180px;
+  --header-h: 72px;
+}
+
+/* ---------- 1. Лес и бумага ---------- */
+html[data-palette="forest"][data-theme="light"] {
+  --bg: #F6F3EA;
+  --surface: #FFFDF7;
+  --surface-2: #EFEBDF;
+  --text: #1B2A23;
+  --muted: #5A6A61;
+  --accent: #3C6653;
+  --accent-hover: #2F5445;
+  --on-accent: #FFFFFF;
+  --border: #DDD8C8;
+}
+html[data-palette="forest"][data-theme="dark"] {
+  --bg: #0E1613;
+  --surface: #16211C;
+  --surface-2: #1D2A24;
+  --text: #EDEAD9;
+  --muted: #9AA79D;
+  --accent: #86B39C;
+  --accent-hover: #9CC4AF;
+  --on-accent: #0E1613;
+  --border: #27352D;
+}
+
+/* ---------- 2. Терракота ---------- */
+html[data-palette="clay"][data-theme="light"] {
+  --bg: #FAF5EE;
+  --surface: #FFFCF6;
+  --surface-2: #F2E9DC;
+  --text: #2A211C;
+  --muted: #6B5A50;
+  --accent: #97573A;
+  --accent-hover: #7E472E;
+  --on-accent: #FFFFFF;
+  --border: #E6DBCC;
+}
+html[data-palette="clay"][data-theme="dark"] {
+  --bg: #17120F;
+  --surface: #211A16;
+  --surface-2: #2A211B;
+  --text: #F2E9E0;
+  --muted: #B3A195;
+  --accent: #D99170;
+  --accent-hover: #E8A785;
+  --on-accent: #17120F;
+  --border: #35291F;
+}
+
+/* ---------- 3. Туман и сталь ---------- */
+html[data-palette="steel"][data-theme="light"] {
+  --bg: #F3F5F7;
+  --surface: #FFFFFF;
+  --surface-2: #E9EDF1;
+  --text: #1B2530;
+  --muted: #5A6672;
+  --accent: #3B5C7D;
+  --accent-hover: #2E4A66;
+  --on-accent: #FFFFFF;
+  --border: #DCE3E9;
+}
+html[data-palette="steel"][data-theme="dark"] {
+  --bg: #0F1418;
+  --surface: #171E24;
+  --surface-2: #1E262D;
+  --text: #E8EDF1;
+  --muted: #9BA8B4;
+  --accent: #8FB0C9;
+  --accent-hover: #A6C3D8;
+  --on-accent: #0F1418;
+  --border: #27323B;
+}
+
+/* ---------- 4. Пыльная роза ---------- */
+html[data-palette="rose"][data-theme="light"] {
+  --bg: #FAF4F4;
+  --surface: #FFFCFC;
+  --surface-2: #F1E5E6;
+  --text: #2A2022;
+  --muted: #6E5A5E;
+  --accent: #8E4A5B;
+  --accent-hover: #783C4C;
+  --on-accent: #FFFFFF;
+  --border: #E9DADA;
+}
+html[data-palette="rose"][data-theme="dark"] {
+  --bg: #161113;
+  --surface: #201A1C;
+  --surface-2: #291F22;
+  --text: #F2E9EA;
+  --muted: #B4A0A4;
+  --accent: #CE8F9E;
+  --accent-hover: #DDA6B3;
+  --on-accent: #161113;
+  --border: #35272A;
+}
+
+/* ---------- 5. Графит ---------- */
+html[data-palette="graphite"][data-theme="light"] {
+  --bg: #F7F7F4;
+  --surface: #FFFFFF;
+  --surface-2: #EDEDE8;
+  --text: #1A1A1A;
+  --muted: #5C5C5C;
+  --accent: #2F2F2F;
+  --accent-hover: #000000;
+  --on-accent: #FFFFFF;
+  --border: #E0E0DB;
+}
+html[data-palette="graphite"][data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1C1C1C;
+  --surface-2: #242424;
+  --text: #E9E7E2;
+  --muted: #A3A09A;
+  --accent: #DDD9D0;
+  --accent-hover: #F0EDE6;
+  --on-accent: #121212;
+  --border: #2F2F2F;
+}
