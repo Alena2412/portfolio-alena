@@ -15,9 +15,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/tokens.css?v=8">
-<link rel="stylesheet" href="assets/css/site.css?v=8">
-<script src="assets/js/boot.js?v=8"></script>
+<link rel="stylesheet" href="assets/css/tokens.css?v=9">
+<link rel="stylesheet" href="assets/css/site.css?v=9">
+<script src="assets/js/boot.js?v=9"></script>
 </head>
 <body>
 
@@ -100,7 +100,7 @@
               <div class="field">
                 <label for="bf-channel">Где удобнее отвечать</label>
                 <select id="bf-channel" name="channel">
-                  <option>Telegram</option>
+                  <option>Мессенджер</option>
                   <option>Почта</option>
                   <option>ВКонтакте</option>
                   <option>Телефон</option>
@@ -188,19 +188,20 @@
               <button class="btn btn-primary" type="submit">Собрать бриф</button>
               <button class="link-reset" type="button" id="briefReset">Очистить</button>
             </div>
-            <p class="field-note">Форма ничего не отправляет сама. После нажатия вы откроете письмо или скопируете текст в Telegram. Черновик сохраняется в браузере.</p>
+            <p class="field-note">Форма ничего не отправляет сама. После нажатия вы скопируете готовый текст и сможете отправить его письмом или в любом мессенджере. Черновик сохраняется в браузере.</p>
           </form>
 
           <section class="brief-result" id="briefResult" hidden>
             <h2>Бриф готов</h2>
-            <p class="field-note">Отправьте его любым удобным способом — текст уже собран.</p>
+            <p class="field-note">Скопируйте текст и вставьте его в письмо или в мессенджер. Кнопка «Открыть в почте» подставит адрес и тему — текст нужно будет вставить в письмо. Письмо откроется в вашей почте, поэтому отправитель и подпись будут вашими.</p>
             <textarea id="briefText" rows="14" readonly aria-label="Текст брифа"></textarea>
             <div class="brief-actions">
-              <a class="btn btn-primary" id="mailBrief" href="mailto:alenapopova149@gmail.com">Открыть в почте</a>
-              <button class="btn btn-ghost" type="button" id="copyBrief">Скопировать</button>
-              <a class="btn btn-ghost" href="https://t.me/lamark_original" target="_blank" rel="noopener">Telegram</a>
+              <button class="btn btn-primary" type="button" id="copyBrief">Скопировать бриф</button>
+              <a class="btn btn-ghost" id="mailBrief" href="mailto:alenapopova149@gmail.com" title="Откроется ваша почта; текст брифа уже скопирован">Открыть в почте</a>
+              <button class="btn btn-ghost" type="button" id="otherMessenger" title="Скопировать бриф и договориться о мессенджере">Другой мессенджер</button>
             </div>
             <p class="brief-status" id="briefStatus" role="status"></p>
+            <p class="field-note">Почта: <a href="mailto:alenapopova149@gmail.com">alenapopova149@gmail.com</a>. Если письмо не открылось — скопируйте бриф и отправьте его с любого почтового ящика.</p>
           </section>
         </div>
 
@@ -216,10 +217,9 @@
 
           <div class="brief-card">
             <h2>Если проще написать</h2>
-            <p>Можно без формы — коротко о задаче в одном сообщении.</p>
+            <p>Можно без формы — коротко о задаче в одном сообщении. Напишите на почту, а мессенджер выберем по договорённости.</p>
             <div class="brief-actions">
-              <a class="btn btn-ghost btn-sm" href="https://t.me/lamark_original" target="_blank" rel="noopener">Telegram</a>
-              <a class="btn btn-ghost btn-sm" href="mailto:alenapopova149@gmail.com">Почта</a>
+              <a class="btn btn-ghost btn-sm" href="mailto:alenapopova149@gmail.com">Написать на почту</a>
             </div>
           </div>
 
@@ -241,13 +241,12 @@
       <a href="works.html">Работы</a>
       <a href="services.html">Услуги</a>
       <a href="brief.html">Бриф</a>
-      <a href="https://t.me/lamark_original" target="_blank" rel="noopener">Telegram</a>
       <a href="mailto:alenapopova149@gmail.com">Почта</a>
     </nav>
   </div>
 </footer>
 
-<script src="assets/js/theme.js?v=8" defer></script>
-<script src="assets/js/brief.js?v=8" defer></script>
+<script src="assets/js/theme.js?v=9" defer></script>
+<script src="assets/js/brief.js?v=9" defer></script>
 </body>
 </html>
