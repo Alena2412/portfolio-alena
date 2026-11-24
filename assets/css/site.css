@@ -198,6 +198,10 @@ body.menu-open { overflow: hidden; }
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;
   padding: 13px 26px; border-radius: 100px; border: 1px solid transparent;
   font-size: 15px; text-decoration: none; cursor: pointer;
+  /* У <button> по умолчанию светлый системный фон — в тёмной теме
+     из-за него пропадал текст. Красим только модификаторы. */
+  background: transparent;
+  appearance: none; -webkit-appearance: none;
   transition: background-color .2s, color .2s, border-color .2s, transform .2s;
 }
 .btn-primary { background: var(--accent); color: var(--on-accent); }
@@ -488,6 +492,8 @@ body.menu-open { overflow: hidden; }
   transition: border-color .2s, transform .2s;
 }
 .contact-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.contact-card-static { cursor: default; }
+.contact-card-static:hover { border-color: var(--border); transform: none; }
 .contact-card .label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
 .contact-card .value { font-size: 17px; }
 .contact-card .note { font-size: 13px; color: var(--muted); }

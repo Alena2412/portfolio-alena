@@ -45,7 +45,7 @@
 
   function setTheme(theme) {
     d.setAttribute('data-theme', theme);
-    store('theme', theme);
+    store('theme-mode', theme);
     syncThemeButton();
     syncMetaThemeColor();
   }
@@ -60,13 +60,6 @@
       setTheme(d.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     });
   }
-
-  /* Если пользователь ещё не выбирал тему — следуем за системной */
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-    var saved = null;
-    try { saved = localStorage.getItem('theme'); } catch (err) {}
-    if (!saved || saved === 'auto') setTheme(e.matches ? 'dark' : 'light');
-  });
 
   /* Мобильное меню */
   var burger = document.querySelector('.burger');

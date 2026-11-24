@@ -2,15 +2,16 @@
 (function () {
   var d = document.documentElement;
   var palette = 'forest';
-  var theme = 'auto';
+  var theme = 'light';
   try {
     palette = localStorage.getItem('palette') || 'forest';
-    theme = localStorage.getItem('theme') || 'auto';
+    /* Светлая тема — основная. Тёмная включается кнопкой и запоминается
+       под новым ключом, чтобы старый выбор «тёмная» не перекрывал новый вид. */
+    theme = localStorage.getItem('theme-mode') === 'dark' ? 'dark' : 'light';
   } catch (e) {}
 
-  var dark = matchMedia('(prefers-color-scheme: dark)').matches;
   d.setAttribute('data-palette', palette);
-  d.setAttribute('data-theme', theme === 'auto' ? (dark ? 'dark' : 'light') : theme);
+  d.setAttribute('data-theme', theme);
   d.classList.add('no-anim');
 
   window.addEventListener('load', function () {

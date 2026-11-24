@@ -12,6 +12,30 @@
   var status = document.getElementById('briefStatus');
   var mailLink = document.getElementById('mailBrief');
 
+  /* Копирование с запасным путём для старых браузеров и file:// */
+  function legacyCopy() {
+    try {
+      output.focus();
+      output.select();
+      output.setSelectionRange(0, output.value.length);
+      return document.execCommand('copy');
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function copyText(text, done) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        done(true);
+      }, function () {
+        done(legacyCopy());
+      });
+    } else {
+      done(legacyCopy());
+    }
+  }
+
   function val(name) {
     var el = form.elements[name];
     return el ? String(el.value || '').trim() : '';
@@ -96,6 +120,9 @@
     try { data = JSON.parse(raw); } catch (e) { return; }
     if (!data) return;
 
+    /* Старые черновики хранили вариант «Telegram» — переносим в нейтральный */
+    if (data.channel === 'Telegram') data.channel = 'Мессенджер';
+
     FIELDS.forEach(function (f) {
       if (data[f] != null && form.elements[f]) form.elements[f].value = data[f];
     });
@@ -140,39 +167,60 @@
     var subject = 'Бриф с сайта — ' + val('name') + ' · ' + val('service');
 
     output.value = text;
-    mailLink.href = 'mailto:' + EMAIL +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(text);
+    /* В письмо подставляем только адрес и тему: длинное тело в mailto
+       обрезается в части браузеров и на телефонах. Текст копируется отдельно. */
+    mailLink.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject);
 
     result.hidden = false;
-    status.textContent = 'Бриф собран. Отправьте письмо или скопируйте текст в Telegram.';
+    status.textContent = 'Бриф собран. Скопируйте текст или откройте письмо.';
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });
     result.setAttribute('tabindex', '-1');
     result.focus({ preventScroll: true });
+
+    /* Пробуем сразу положить текст в буфер: тогда в письме достаточно
+       нажать «Вставить», даже если браузер не открыл почтовую программу. */
+    copyText(text, function (ok) {
+      status.textContent = ok
+        ? 'Бриф собран, текст скопирован. Вставьте его в письмо или мессенджер.'
+        : 'Бриф собран. Скопируйте текст кнопкой «Скопировать бриф».';
+    });
   });
+
+  /* ---------- Почта ----------
+     Ссылка остаётся обычной: браузер сам открывает почтовую программу.
+     Тело письма в mailto не передаём — только адрес и тему, иначе длинный
+     текст обрезается и почта может не открыться. Текст копируем параллельно. */
+  if (mailLink) {
+    mailLink.addEventListener('click', function () {
+      copyText(output.value, function (ok) {
+        status.textContent = ok
+          ? 'Текст скопирован. Вставьте его в письмо: Ctrl+V или «Вставить».'
+          : 'Скопируйте текст кнопкой «Скопировать бриф» и вставьте в письмо.';
+      });
+    });
+  }
 
   /* ---------- Копирование ---------- */
   var copyBtn = document.getElementById('copyBrief');
   if (copyBtn) {
     copyBtn.addEventListener('click', function () {
-      output.focus();
-      output.select();
-      output.setSelectionRange(0, output.value.length);
+      copyText(output.value, function (ok) {
+        status.textContent = ok
+          ? 'Скопировано. Вставьте текст в письмо или мессенджер.'
+          : 'Не получилось скопировать автоматически — текст выделен, нажмите Ctrl+C.';
+      });
+    });
+  }
 
-      function done() {
-        status.textContent = 'Скопировано. Вставьте текст в письмо или в Telegram.';
-      }
-      function fail() {
-        status.textContent = 'Не получилось скопировать автоматически — текст выделен, нажмите Ctrl+C.';
-      }
-
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(output.value).then(done, function () {
-          try { document.execCommand('copy') ? done() : fail(); } catch (e) { fail(); }
-        });
-      } else {
-        try { document.execCommand('copy') ? done() : fail(); } catch (e) { fail(); }
-      }
+  /* ---------- Другой мессенджер ---------- */
+  var otherBtn = document.getElementById('otherMessenger');
+  if (otherBtn) {
+    otherBtn.addEventListener('click', function () {
+      copyText(output.value, function (ok) {
+        status.textContent = ok
+          ? 'Бриф скопирован. Напишите на ' + EMAIL + ' — договоримся, в каком мессенджере продолжить.'
+          : 'Скопируйте бриф кнопкой «Скопировать бриф» и напишите на ' + EMAIL + ' — договоримся о мессенджере.';
+      });
     });
   }
 
